@@ -4,14 +4,20 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "db:migrate": "knex migrate:latest --knexfile=db/knexfile.js",
+    "db:seed": "knex seed:run --knexfile=db/knexfile.js"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
+    "casual": "^1.5.19",
     "express": "^4.16.4",
     "graphql": "^14.0.2",
     "graphql-server-express": "^1.4.0",
-    "graphql-tools": "^4.0.2"
+    "graphql-tools": "^4.0.2",
+    "knex": "^0.15.2",
+    "objection": "^1.4.0",
+    "sqlite3": "^4.0.3"
   },
   "devDependencies": {
     "nodemon": "^1.18.4"
